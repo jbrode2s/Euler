@@ -2,25 +2,18 @@ package vielfaches;
 
 public class vielfaches3und5 {
 
-	private static int a = 3;
-	private static int b = 5;
-
-	public static void vielfaches(int zahl, int n) {
+	public static int vielfaches() {
 		int summe = 0;
-		for (int i = 1; i <= n; i++) {
-				summe += zahl * i;
-				if(zahl*i >= 999) {
-					System.out.println(summe);
-					return;
-				}
+		for (int i = 0; i < 1000; i++) {
+			if (i % 3 == 0 || i % 5 == 0) {
+				summe += i;
+			}
 		}
+		return summe;
 	}
 
 	public static void main(String[] args) {
-		vielfaches(a, 1000);
-		System.out.println(""
-				+ "------------------");
-		vielfaches(b,1000);
+		System.out.println(vielfaches());
 	}
 
 }
